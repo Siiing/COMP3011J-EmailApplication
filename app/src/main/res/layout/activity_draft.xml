@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DraftActivity"
+    android:background="@color/littlepurple">
+
+    <!--back button & send button-->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="BACK"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+        />
+
+    <Button
+        android:id="@+id/preview_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:text="PREVIEW"
+        android:textSize="18sp"
+        />
+
+    <!--email area-->
+    <!--sender & receiver & cc & bcc-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="640dp"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/littlepurple"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/from_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="from: "
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/sender"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                android:layout_marginTop="0dp">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/to_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="to: "
+                android:textSize="20sp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/receiver"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="35dp">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cc_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cc: "
+                android:textSize="20sp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/cc"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="70dp">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bcc_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bcc: "
+                android:textSize="20sp"
+                android:layout_marginTop="105dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/bcc"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                android:layout_marginTop="105dp">
+            </EditText>
+        </LinearLayout>
+
+        <!--subject & content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:orientation="vertical"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="@drawable/black_border">
+
+            <EditText
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:hint="Content"
+                android:textSize="20sp"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:padding="10dp"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="580dp">
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="CLEAR"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <!--my name-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developed by Siying.Li"
+            android:textColor="@color/purple"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp">
+        </TextView>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/background"
+    tools:context=".MainActivity">
+
+    <!--the welcome text-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/welcome_text"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"
+        android:textColor="@color/purple"/>
+
+    <!--composition button-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/composition_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="COMPOSITION"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/baseline_alternate_email_24"
+        />
+
+    <!--composition button-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/draft_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="DRAFT"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/baseline_drafts_24"
+        />
+
+    <!--sent button-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/sent_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="SENT"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/baseline_mark_email_read_24"/>
+
+
+
+    <!--logout button-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="LOGOUT"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/baseline_logout_24"/>
+
+
+
+    <!--help button-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/help_button"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_help_24"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="HELP"
+        />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat >
